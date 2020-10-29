@@ -1,7 +1,6 @@
-import React, { useState, useRef,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
-import * as Scroll from 'react-scroll';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { animateScroll as scroll } from 'react-scroll'
 
 import Header from '../components/Header';
 import HeroArea from '../components/HeroArea';
@@ -33,7 +32,6 @@ const HomePage = () => {
 
   
     useEffect(() => {
-      console.log("category", category);
       setLoading(true);
       fetchSearch();
 
@@ -65,7 +63,7 @@ const HomePage = () => {
         setJobs(slice);
         setPageCount(Math.ceil(data.length / perPage))
         setLoading(false);
-        scrollTo();
+        scrollToJobs();
       })
       .catch((error) => console.log("Oops! . There Is A Problem" + error));
   };

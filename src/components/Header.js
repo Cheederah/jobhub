@@ -22,8 +22,8 @@ const Header = ({ scrollToJobs, scrollToAbout, scrollTo }) => {
                     <div className="main-menu d-none d-lg-block">
                       <nav>
                         <ul id="navigation" style={{cursor:'pointer'}}>                                                                                          
-                          <li><a onClick={scrollTo}>Home</a></li>
-                          <li><a onClick={scrollToJobs}>Jobs</a></li>
+                          <li><a  onClick={scrollTo}>Home</a></li>
+                          <li><a  onClick={scrollToJobs}>Jobs</a></li>
                           {/* <li><a href="#">Pages</a>
                             <ul className="submenu">
                               <li><a href="about.html">about</a></li>
